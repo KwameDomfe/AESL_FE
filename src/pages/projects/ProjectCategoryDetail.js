@@ -51,7 +51,7 @@ const ProjectCategoryDetail = () => {
                 return newMeta;
             });
         }
-    }, [category, categories]);
+    }, [category, categories,setCurrentCategory, setFilter, setPageMeta, setPageTitle]);
 
     return (
         <article id = ""

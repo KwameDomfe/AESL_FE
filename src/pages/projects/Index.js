@@ -2,7 +2,6 @@
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 import AESLProjectsNav from '../../components/organisms/navs/AESLProjectsNav'
-import ShareButtons from '../../components/molecules/social/ShareButtons'
 import ProjectCard from '../../components/organisms/cards/ProjectCard'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 import CategoryOverview from '../../components/molecules/CategoryOverview'
