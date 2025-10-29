@@ -1,0 +1,156 @@
+/*----- IMPORTS -----*/
+
+	/* -----CUSTOM FONT STYLES ----- */
+	/* @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400&family=Ubuntu&display=swap") */
+	/* --x--CUSTOM FONT STYLES --x-- */
+
+	/* ----- SYMBOLS / OTHER FONTS ----- */
+
+	/* --x-- SYMBOLS / OTHER FONTS --x-- */
+   
+	/* ----- CUSTOM COMPONENT STYLES  ----- */
+	/* @import url("../CSS/Components/GDT_avatars. css");
+	@import url("../CSS/Components/GDT_thumbnails.css");
+    @import url("../CSS/Components/GDT_buttons.css");
+	@import url("./CSS/Components/GDT_dropdown.css");
+	@import url("../CSS/Components/GDT_cards.css");
+	@import url("../CSS/Components/GDT_badges.css");
+	@import url("../CSS/Components/GDT_tabs.css");
+	@import url("../CSS/Components/GDT_lists.css");
+	@import url("../CSS/Components/GDT_cascade_menu.css");
+	@import url("../CSS/Components/GDT_forms.css"); 
+    @import url("../CSS/Components/GDT_banners.css");                   
+	/* --x-- CUSTOM COMPONENT STYLES  --x-- */
+
+    /* ----- UTILITY STYLES ----- */
+    @import url(./css/Functional/Layout.css);
+    @import url(./css/Functional/Position.css);
+
+    @import url(./css/Functional/Size.css);
+    @import url(./css/Functional/Spacing.css);
+   
+    @import url(./css/Functional/Typography.css);
+
+    @import url(./css/Functional/Backgrounds.css);
+    @import url(./css/Functional/Borders.css);
+    @import url(./css/Functional/Colours.css);
+
+    @import url(./css/Functional/Effects.css);
+
+    
+    /* --x-- UTILITY STYLES --x-- */
+
+
+/*--x-- IMPORTS --x--*/
+    
+/* ----- Variables ----- */
+:root   {
+    /* 01 Theme Colors */
+    --white:rgb(240, 240, 240);
+    --grey:rgb(170, 170, 170);
+    --darkGrey:rgb(80, 80, 80);
+    --dark: rgb(10, 10, 10);
+    
+    --red:red;
+    --geolo: rgb(27, 27, 27); 
+    --gold: gold;
+    --primary: var(--red);
+    --secondry:var(--blue);
+    
+    --bgColour:var(--geolo);
+    --fontsColor:var(--white);
+
+    /* 02 Theme Gradients */
+    /* linear-gradient */
+    --linear-gradient-1: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 255));
+    --linear-gradient-2: linear-gradient(45deg, rgb(240, 180, 14), rgb(207, 30, 30));
+
+    /* radial-gradient */
+    --radial-gradient-1: radial-gradient(circle, rgb(255,255,255) 20%, var(--dark) 60%);
+    --radial-gradient-2: radial-gradient(circle, rgb(230, 44, 44) 20%, var(--darkGrey) 60%);
+    
+    /* 03 Theme Fonts-Family */
+    --headingFonts: arial;
+    --bodyFonts: Tahoma;
+
+    /* 04 Theme Fonts-Sizes */
+    --verySmallFontSize:0.25rem;
+    --smallFontSize:0.5rem;
+    --baseFontSize: 1rem;
+    --largeFontSize:1.5rem;
+    --xlargeFontSize: 2rem;
+    --xxlargeFontSize:2.5rem;
+    --heading-1:var(--xxlargeFontSize);
+    --heading-2:var(--xlargeFontSize);
+    --heading-3:var(--largeFontSize);
+    --heading-4:var(--xlargeFontSize);
+    
+    
+}
+/* --x-- Variables --x-- */
+
+/* --xxxxxxxxxx-- DOCUMENT STYLES --xxxxxxxxxx--*/
+/* ----- CUSTOM LAYOUT STYLES  ----- */
+
+/*----- Main Headear Styles -----*/
+
+    
+/*.mainNav__Logo{
+     background: 
+    rgb(41, 41, 41) 
+    url(../Reosurces/Images/Logo_Images/GDB_Logo--large.png) 
+    no-repeat center right;
+    background-size: cover; */
+    /* text-indent: -90rem; 
+
+}*/
+
+/*--x-- Main Headear Styles --x--*/
+
+/* Monochrome map tiles (keeps markers/icons colored) */
+.mono-map .leaflet-tile {
+    filter: grayscale(100%) contrast(1.05) brightness(0.95);
+}
+
+/* Blue-toned monochrome map tiles */
+.blue-map .leaflet-tile {
+    /* Tunable via CSS variables; defaults chosen for a brand-safe blue */
+    --map-blue-grayscale: 100%;
+    --map-blue-sepia: 18%;
+    --map-blue-hue: 195deg;         /* rotate towards blue */
+    --map-blue-saturate: 170%;      /* boost saturation a bit */
+    --map-blue-contrast: 1.06;      /* add subtle contrast */
+    --map-blue-brightness: 0.96;    /* slightly darker */
+
+    filter: grayscale(var(--map-blue-grayscale))
+            sepia(var(--map-blue-sepia))
+            hue-rotate(var(--map-blue-hue))
+            saturate(var(--map-blue-saturate))
+            contrast(var(--map-blue-contrast))
+            brightness(var(--map-blue-brightness));
+}
+
+/* Optional presets: add as extra class on the same container if desired */
+.blue-map.blue-map--soft .leaflet-tile {
+    --map-blue-sepia: 10%;
+    --map-blue-hue: 190deg;
+    --map-blue-saturate: 130%;
+    --map-blue-contrast: 1.02;
+    --map-blue-brightness: 1.0;
+}
+
+.blue-map.blue-map--brand .leaflet-tile {
+    --map-blue-sepia: 20%;
+    --map-blue-hue: 200deg;
+    --map-blue-saturate: 185%;
+    --map-blue-contrast: 1.06;
+    --map-blue-brightness: 0.95;
+}
+
+.blue-map.blue-map--navy .leaflet-tile {
+    --map-blue-sepia: 25%;
+    --map-blue-hue: 210deg;
+    --map-blue-saturate: 210%;
+    --map-blue-contrast: 1.1;
+    --map-blue-brightness: 0.9;
+}

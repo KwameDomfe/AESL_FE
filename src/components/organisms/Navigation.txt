@@ -1,0 +1,13 @@
+const Navigation = () => {
+    return (
+        <nav id=""
+            className="dn flex-m justify-center items-center h-100
+                
+                f0-75 f1-00-l"
+        >
+            
+        </nav>
+    )
+}
+
+export default Navigation

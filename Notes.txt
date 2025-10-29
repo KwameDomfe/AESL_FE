@@ -1,0 +1,19 @@
+npx create-react-app <foldername> .
+cd <foldername>
+npm start
+npm install react-router-dom
+npm install @material-ui/core
+pip install django-cors-headers
+
+Info:
+Strict Mode
+
+
+
+To do's as at 28-10-25
+MainHeader      Completed 
+MainFooter      Not Completed
+Homepage        Not Completed
+    Decide and Finalize CTA
+    Work on Project Categories Section.
+

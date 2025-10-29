@@ -1,0 +1,134 @@
+/*----- IMPORTS -----*/
+
+	/* -----CUSTOM FONT STYLES ----- */
+	/* @import url("https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@400&family=Ubuntu&display=swap") */
+	/* --x--CUSTOM FONT STYLES --x-- */
+
+	/* ----- SYMBOLS / OTHER FONTS ----- */
+
+	/* --x-- SYMBOLS / OTHER FONTS --x-- */
+   
+	/* ----- CUSTOM COMPONENT STYLES  ----- */
+	 /* @import url("../CSS/Components/GDT_avatars. css");
+	@import url("../CSS/Components/GDT_thumbnails.css");
+    @import url("../CSS/Components/GDT_buttons.css");
+	@import url("./CSS/Components/GDT_dropdown.css");
+	@import url("../CSS/Components/GDT_cards.css");
+	@import url("../CSS/Components/GDT_badges.css");
+	@import url("../CSS/Components/GDT_tabs.css");
+	@import url("../CSS/Components/GDT_lists.css");
+	@import url("../CSS/Components/GDT_cascade_menu.css");
+	@import url("../CSS/Components/GDT_forms.css"); 
+    @import url("../CSS/Components/GDT_banners.css");                   
+	/* --x-- CUSTOM COMPONENT STYLES  --x-- */
+
+    /* ----- UTILITY STYLES ----- */
+    @import url(./Functional/Layout.css);
+    @import url(./Functional/Position.css);
+
+    @import url(./Functional/Size.css);
+    @import url(./Functional/Spacing.css);
+   
+    @import url(./Functional/Typography.css);
+
+    @import url(./Functional/Backgrounds.css);
+    @import url(./Functional/Borders.css);
+    @import url(./Functional/Colours.css);
+
+    @import url(./Functional/Effects.css);
+
+    
+    /* --x-- UTILITY STYLES --x-- */
+
+
+/*--x-- IMPORTS --x--*/
+    
+/* ----- Variables ----- */
+:root   {
+    /* 01 Theme Colors */
+    --white:rgb(240, 240, 240);
+    --grey:rgb(170, 170, 170);
+    --darkGrey:rgb(80, 80, 80);
+    --dark: rgb(10, 10, 10);
+    
+    --red:red;
+    --geolo: rgb(27, 27, 27); 
+    --gold: gold;
+    --primary: var(--red);
+    --secondry:var(--blue);
+    
+    --bgColour:var(--geolo);
+    --fontsColor:var(--white);
+
+    /* 02 Theme Gradients */
+    /* linear-gradient */
+    --linear-gradient-1: linear-gradient(90deg, rgb(0, 0, 0), rgb(255, 255, 255));
+    --linear-gradient-2: linear-gradient(45deg, rgb(240, 180, 14), rgb(207, 30, 30));
+
+    /* radial-gradient */
+    --radial-gradient-1: radial-gradient(circle, rgb(255,255,255) 20%, var(--dark) 60%);
+    --radial-gradient-2: radial-gradient(circle, rgb(230, 44, 44) 20%, var(--darkGrey) 60%);
+    
+    /* 03 Theme Fonts-Family */
+    --headingFonts: arial;
+    --bodyFonts: Tahoma;
+
+    /* 04 Theme Fonts-Sizes */
+    --verySmallFontSize:0.25rem;
+    --smallFontSize:0.5rem;
+    --baseFontSize: 1rem;
+    --largeFontSize:1.5rem;
+    --xlargeFontSize: 2rem;
+    --xxlargeFontSize:2.5rem;
+    --heading-1:var(--xxlargeFontSize);
+    --heading-2:var(--xlargeFontSize);
+    --heading-3:var(--largeFontSize);
+    --heading-4:var(--xlargeFontSize);
+    
+    
+}
+
+@media(min-width:512px) { 
+    body{
+        background-color: rgb(255, 255, 255);
+    }
+
+    .subNav{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .gridLayout{
+
+        grid-template-columns: 1.5fr 3fr 1fr;
+        
+    }
+}                 
+@media(min-width:768px) { 
+    body{
+        background-color: rgba(59, 27, 27, 0);
+    }
+
+    .m__ulist{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    }
+
+    .o__banner ul{
+        display: flex;
+    }
+}   
+@media(min-width:1024px) { 
+  body{
+        background-color: rgb(255, 255, 255);
+    }
+    .subNav{
+        grid-template-columns: repeat(4,1fr);
+    }  
+}
+@media(min-width:1280px) { 
+    body{
+        background-color: rgb(255, 255, 255);
+    }  
+}
+
+/* --x-- Mobo First Media Queries --x--*/
