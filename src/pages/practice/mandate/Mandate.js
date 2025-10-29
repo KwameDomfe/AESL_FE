@@ -1,6 +1,6 @@
 
 import mandate from '../../../images/practice/mandate/00.jpg'
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import SectionFooter from '../../../components/organisms/footers/SectionFooter'
 import { Link } from 'react-router-dom'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'

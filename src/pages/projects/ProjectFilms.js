@@ -1,6 +1,6 @@
 import projectsBanner from '../../images/projects/00.jpeg'
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
-import AESLProjectsNav from '../../components/organisms/navs/AESL_ProjectsNav'
+import AESLProjectsNav from '../../components/organisms/navs/AESLProjectsNav'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 

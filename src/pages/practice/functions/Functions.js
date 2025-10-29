@@ -1,6 +1,6 @@
 
 import functions from '../../../images/practice/functions/00.jpg'
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import SectionFooter from '../../../components/organisms/footers/SectionFooter'
 import { Link } from 'react-router-dom'

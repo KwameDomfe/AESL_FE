@@ -5,7 +5,7 @@
 // Components
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
-import AESLProjectsNav from '../../components/organisms/navs/AESL_ProjectsNav'
+import AESLProjectsNav from '../../components/organisms/navs/AESLProjectsNav'
 import ProjectCard from '../../components/organisms/cards/ProjectCard'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 

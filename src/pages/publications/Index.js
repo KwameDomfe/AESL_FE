@@ -1,13 +1,12 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import { Link } from 'react-router-dom';
-import AESLPublicationsNav from '../../components/organisms/navs/AESL_PublicationsNav'
+import { useEffect, useMemo, useState } from 'react';
+import AESLPublicationsNav from '../../components/organisms/navs/AESLPublicationsNav'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import PageMeta from '../../components/molecules/seo/PageMeta'
 import publicationsHeader from '../../images/publications/00.jpg'
 import { PiBookBold } from 'react-icons/pi'
-import { FiDownload, FiExternalLink, FiSearch } from 'react-icons/fi'
-import { publicationCategories, publications as allPublications } from '../../data/publications'
+import { FiDownload, FiExternalLink } from 'react-icons/fi'
+import { publications as allPublications } from '../../data/publications'
 
 const Index = () => {
     const [q, setQ] = useState('');

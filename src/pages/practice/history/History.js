@@ -1,5 +1,5 @@
 import history from '../../../images/practice/history/History-01.JPG'
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import SectionFooter from '../../../components/organisms/footers/SectionFooter'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import SubCategoryHeaderBanner from '../../../components/molecules/banners/SubCategoryHeaderBanner'

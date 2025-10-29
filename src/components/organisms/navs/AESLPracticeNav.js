@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { FiShare2 } from 'react-icons/fi';
 
-const AESL_PracticeNav = () => {
+const AESLPracticeNav = () => {
     const url = typeof window !== 'undefined' ? window.location.href : 'https://aesl.com/practice';
     const text = encodeURIComponent('Practice | AESL');
     const encodedUrl = encodeURIComponent(url);
@@ -76,4 +76,4 @@ const AESL_PracticeNav = () => {
     );
 }
 
-export default AESL_PracticeNav
+export default AESLPracticeNav

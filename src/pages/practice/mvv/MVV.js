@@ -3,7 +3,7 @@ import mission from '../../../images/practice/mission_vision_values/Mission.PNG'
 import vision from '../../../images/practice/mission_vision_values/vision.PNG'
 import values from '../../../images/practice/mission_vision_values/values.PNG'
 
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import { Link } from 'react-router-dom'
 import SubCategoryHeaderBanner from '../../../components/molecules/banners/SubCategoryHeaderBanner'

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { FiShare2 } from 'react-icons/fi';
-const AESL_PrinciplesNav = () => {
+const AESLPrinciplesNav = () => {
     return (
         <div id="pageNav" className="grid gtc12 ggap1-00 gc1s12 pa1-00 mb2-00 w-100 white-90 bg-blue0">
             <nav id="principles_nav1" className="gr1s1 gc1s1 h10-00 w10-00 f1-00 shadow-red ba br0-50">
@@ -50,4 +50,4 @@ const AESL_PrinciplesNav = () => {
 }
 
 
-export default AESL_PrinciplesNav
+export default AESLPrinciplesNav

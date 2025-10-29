@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const AESL_PageNav = (props) => {
+const AESLPageNav = (props) => {
 
     const {
         parent,
@@ -104,4 +104,4 @@ const AESL_PageNav = (props) => {
     )
 }
 
-export default AESL_PageNav
+export default AESLPageNav

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { projectCategories } from '../../../data/projectsInfo';
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { FiShare2 } from 'react-icons/fi';
-const AESL_ProjectsNav = () => {
+const AESLProjectsNav = () => {
     const url = typeof window !== 'undefined' ? window.location.href : 'https://aesl.com/projects';
     const text = encodeURIComponent('Projects | AESL');
     const encodedUrl = encodeURIComponent(url);
@@ -62,4 +62,4 @@ const AESL_ProjectsNav = () => {
     );
 }
 
-export default AESL_ProjectsNav;
+export default AESLProjectsNav;

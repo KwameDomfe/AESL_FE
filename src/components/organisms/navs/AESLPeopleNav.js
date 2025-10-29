@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import { FiShare2 } from 'react-icons/fi';
 
-const AESL_PeopleNav = () => {
+const AESLPeopleNav = () => {
     const url = typeof window !== 'undefined' ? window.location.href : 'https://aesl.com/people';
     const text = encodeURIComponent('People | AESL');
     const encodedUrl = encodeURIComponent(url);
@@ -94,4 +94,4 @@ const AESL_PeopleNav = () => {
     );
 }
 
-export default AESL_PeopleNav
+export default AESLPeopleNav

@@ -1,4 +1,4 @@
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import sectorMinistry from '../../../images/practice/sector_ministry/sm-02.jpg'

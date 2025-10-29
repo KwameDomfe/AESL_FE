@@ -1,4 +1,4 @@
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import services from '../../../images/practice/services/00.jpg'
 import portrait01 from '../../../images/placeholders/portrait/portrait-1.png'

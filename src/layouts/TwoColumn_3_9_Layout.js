@@ -1,6 +1,6 @@
 import { useEffect } from "react"
 import { Link, NavLink, Outlet } from "react-router-dom"
-import AESL_PracticeNav from "../components/organisms/navs/AESL_PracticeNav"
+import AESLPracticeNav from "../components/organisms/navs/AESLPracticeNav"
 import CategoryHeaderBanner from "../components/molecules/banners/CategoryHeaderBanner"
 
 const TwoColumn_3_9_Layout = (props) => {
@@ -44,7 +44,7 @@ const TwoColumn_3_9_Layout = (props) => {
                     // image = {practiceBanner}
                     title ='practice'
                 />
-                <AESL_PracticeNav />
+                <AESLPracticeNav />
             </header>
             {/* Page Header End  */}
             

@@ -1,8 +1,7 @@
-import React from 'react'
 import { NavLink, useLocation } from 'react-router-dom'
 import { publicationCategories } from '../../../data/publications'
 import { FaTwitter, FaFacebookF, FaLinkedinIn, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
-import { FiShare2, FiSearch } from 'react-icons/fi';
+import { FiShare2 } from 'react-icons/fi';
 import { publications } from '../../../data/publications';
 
 const toSlug = (name) => name.toLowerCase().replace(/\s+/g, '-');
@@ -13,7 +12,7 @@ function getActiveCategories() {
   return publicationCategories.filter(catObj => categorySet.has(catObj.name));
 }
 
-const AESL_PublicationsNav = ({
+const AESLPublicationsNav = ({
   navShadow = 'shadow-yellow',
   navText = 'white-90',
   navBg = 'bg-blue0',
@@ -166,4 +165,4 @@ const AESL_PublicationsNav = ({
   )
 }
 
-export default AESL_PublicationsNav
+export default AESLPublicationsNav

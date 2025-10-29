@@ -1,5 +1,5 @@
 import React from 'react'
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import alliances from '../../../images/practice/alliances/00.jpg'
 import SubCategoryHeaderBanner from '../../../components/molecules/banners/SubCategoryHeaderBanner'

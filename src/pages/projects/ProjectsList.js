@@ -1,7 +1,7 @@
 import projectsBanner from '../../images/projects/00.jpeg'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
-import AESLProjectsNav from '../../components/organisms/navs/AESL_ProjectsNav'
+import AESLProjectsNav from '../../components/organisms/navs/AESLProjectsNav'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 import { Link } from 'react-router-dom'
 import { projects } from '../../data/projectsInfo'

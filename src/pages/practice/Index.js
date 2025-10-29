@@ -1,7 +1,6 @@
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
-import AESLPracticeNav from '../../components/organisms/navs/AESL_PracticeNav'
-import ShareButtons from '../../components/molecules/social/ShareButtons'
+import AESLPracticeNav from '../../components/organisms/navs/AESLPracticeNav'
 import PageOverview from '../../components/molecules/pages/PageOverview'
 
 import PracticeCard from './PracticeCard'

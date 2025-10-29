@@ -1,5 +1,5 @@
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import corporateGovernance from '../../../images/practice/corporate-governance/AESL-Board.jpg'
 import boardMember01 from '../../../images/practice/corporate-governance/board-member-01.jpeg'
 import boardMember02 from '../../../images/practice/corporate-governance/board-member-02.jpeg'

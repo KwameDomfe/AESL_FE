@@ -1,7 +1,7 @@
 import management from '../../../images/practice/management/00.jpeg'
 import React, { useEffect, useState } from 'react';
 
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import { Link } from 'react-router-dom'
 import { deputyManagingDirectors, managingDirectorImages, managingDirector } from '../../../data/managementInfo'

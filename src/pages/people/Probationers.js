@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import probationers from '../../images/practice/management/management-07.jpeg'
-import AESLPeopleNav from '../../components/organisms/navs/AESL_PeopleNav'
+import AESLPeopleNav from '../../components/organisms/navs/AESLPeopleNav.js'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 import probationersList from '../../data/probationersList'

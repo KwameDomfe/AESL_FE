@@ -1,6 +1,6 @@
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
-import AESLPeopleNav from '../../components/organisms/navs/AESL_PeopleNav'
+import AESLPeopleNav from '../../components/organisms/navs/AESLPeopleNav.js'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 import CategoryOverview from '../../components/molecules/CategoryOverview'
 import StaffImage from '../../components/shared/StaffImage.js';

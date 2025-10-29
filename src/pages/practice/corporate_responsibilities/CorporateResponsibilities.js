@@ -1,4 +1,4 @@
-import AESLPracticeNav from '../../../components/organisms/navs/AESL_PracticeNav'
+import AESLPracticeNav from '../../../components/organisms/navs/AESLPracticeNav'
 import AESLPageFooter from '../../../components/organisms/footers/AESLPageFooter'
 import corporateResponsibilities from '../../../images/practice/corporate_responsilities/00.png'
 import SubCategoryHeaderBanner from '../../../components/molecules/banners/SubCategoryHeaderBanner'

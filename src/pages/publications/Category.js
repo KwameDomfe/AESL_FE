@@ -6,7 +6,7 @@ import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter';
 import { publications as allPublications, publicationCategories } from '../../data/publications';
 import headerImage from '../../images/publications/00.jpg';
 import { FiDownload, FiExternalLink, FiSearch } from 'react-icons/fi';
-import AESL_PublicationsNav from '../../components/organisms/navs/AESL_PublicationsNav';
+import AESLPublicationsNav from '../../components/organisms/navs/AESLPublicationsNav';
 import ShareButtons from '../../components/molecules/social/ShareButtons';
 
 const slugToLabel = {
@@ -109,7 +109,7 @@ function PublicationsCategory() {
         )}
         <header className={headerBg}>
           <CategoryHeaderBanner image={headerImage} title={currentLabel} />
-          <AESL_PublicationsNav
+          <AESLPublicationsNav
             navShadow={navShadow}
             navText={footerText}
             navBg={navBg}

@@ -1,5 +1,4 @@
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
-import ShareButtons from '../../components/molecules/social/ShareButtons'
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
 import xxx from '../../images/placeholders/landscape_Images/landscape_01.png'
 import { IoNewspaperOutline } from 'react-icons/io5'

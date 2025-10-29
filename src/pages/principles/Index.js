@@ -1,9 +1,8 @@
 // Components
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
-import AESLPrinciplesNav from '../../components/organisms/navs/AESL_PrinciplesNav'
+import AESLPrinciplesNav from '../../components/organisms/navs/AESLPrinciplesNav'
 import CategoryOverview from '../../components/molecules/CategoryOverview'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
-import ShareButtons from '../../components/molecules/social/ShareButtons'
 import PrinciplesCard from './PrinciplesCard'
 import SectionFooter from '../../components/organisms/footers/SectionFooter'
 
