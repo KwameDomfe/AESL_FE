@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import  { useEffect, useMemo, useState } from 'react';
 import AESLPublicationsNav from '../../components/organisms/navs/AESLPublicationsNav'
 import AESLPageFooter from '../../components/organisms/footers/AESLPageFooter'
 import CategoryHeaderBanner from '../../components/molecules/banners/CategoryHeaderBanner'
@@ -9,18 +9,14 @@ import { FiDownload, FiExternalLink } from 'react-icons/fi'
 import { publications as allPublications } from '../../data/publications'
 
 const Index = () => {
-    const [q, setQ] = useState('');
-    const [category, setCategory] = useState('All');
-    const [year, setYear] = useState('All');
+    const [q] = useState('');
+    const [category] = useState('All');
+    const [year] = useState('All');
 
     useEffect(() => {
         document.title = 'Publications | AESL';
     }, []);
 
-    const years = useMemo(() => {
-        const ys = Array.from(new Set(allPublications.map(p => p.year))).sort((a,b) => b - a);
-        return ys;
-    }, []);
 
     // Pick a random header background color from brand palette once per mount
     // Match header background and nav shadow color

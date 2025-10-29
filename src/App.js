@@ -2,6 +2,7 @@
 import './App.css';
 import './css/utilities.css';
 import './css/gdb_normalize.css';
+import { HelmetProvider } from 'react-helmet-async';
 
 /* React Router Dom */
 import {
@@ -485,11 +486,12 @@ const aeslRouter = createBrowserRouter([
 
 
 function App() {
-    return (
-        <>
-            <RouterProvider router={aeslRouter} />
-        </>
-    );
+
+        return (
+            <HelmetProvider>
+                <RouterProvider router={aeslRouter} />
+            </HelmetProvider>
+        );
 }
 
 export default App;
