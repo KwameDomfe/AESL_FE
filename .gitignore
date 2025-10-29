@@ -11,6 +11,11 @@
 # production
 /build
 
+.vscode/
+AUDIT_FIX_SUMMARY.md
+ROUTE_MIGRATION_SUMMARY.md
+.txt
+.log
 # misc
 .DS_Store
 .env.local
