@@ -121,7 +121,8 @@ function PublicationsCategory() {
             years={years} // <-- Pass all years here
           />
           {currentOverview && (
-            <div className="bg-white pa2-00 ba blue0 b--black-10 br0-25 pv4-00">
+            <div className="bg-white pa2-00 ba blue0 b--black-10 br0-25 pv4-00"
+            >
               <h2 className="f2-00 mb1-00">{currentLabel} Overview</h2>
               {currentOverview.map((para, idx) => (
                 <p key={idx} className="f1-00 gray0 f1-50 lh-copy">{para}</p>
@@ -133,39 +134,45 @@ function PublicationsCategory() {
           <section className="grid gtc12 ggap1-00 pv1-00">
             {/* Results */}
             <section className="gc1s12 grid gtc12 ggap1-00">
-              {filtered.length === 0 ? (
-                <div className="gc1s12 pa2-00 tc">
-                  <h3 className="mt0-00">No {currentLabel?.toLowerCase() || ''} found</h3>
-                  <p className="gray">Try changing the year or search term.</p>
-                </div>
-              ) : (
-                filtered.map(p => (
-                  <article key={p.id} className="bg-white ba b--black-10 br0-25 overflow-hidden grid gtc12 gc1s12">
-                    <figure className="gr1s1 gc1s5 bg-blue1">
-                      <img src={p.thumbnail} alt={`${p.title} — ${p.category}`} className="w-100 h-100 cover" loading="lazy" decoding="async" />
-                    </figure>
-                    <div className="gr1s1 gc6s7 pa1-00 flex flex-column justify-between">
-                      <div>
-                        <h3 className="mt0-00 mb0-25">{p.title}</h3>
-                        <div className="f0-875 gray mb0-50">{p.category} • {p.year}</div>
-                        {p.description && <p className="lh-copy mt0-00">{p.description}</p>}
-                      </div>
-                      <div className="flex ggap0-50 mt1-00">
-                        {p.fileUrl && (
-                          <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
-                            <FiDownload className="mr0-25" /> Download
-                          </a>
-                        )}
-                        {p.externalUrl && (
-                          <a href={p.externalUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
-                            <FiExternalLink className="mr0-25" /> View online
-                          </a>
-                        )}
-                      </div>
-                    </div>
-                  </article>
-                ))
-              )}
+              {
+                filtered.length === 0 ? (
+                  <div className="gc1s12 pa2-00 tc">
+                    <h3 className="mt0-00">No {currentLabel?.toLowerCase() || ''} found</h3>
+                    <p className="gray">Try changing the year or search term.</p>
+                  </div>
+                ) : (
+                  filtered.map(
+                    p => (
+                      <article key={p.id} 
+                        className="bg-white ba b--black-10 br0-25 overflow-hidden grid gtc12 gc1s12"
+                      >
+                        <figure className="gr1s1 gc1s5 bg-blue1">
+                          <img src={p.thumbnail} alt={`${p.title} — ${p.category}`} className="w-100 h-100 cover" loading="lazy" decoding="async" />
+                        </figure>
+                        <div className="gr1s1 gc6s7 pa1-00 flex flex-column justify-between">
+                          <div>
+                            <h3 className="mt0-00 mb0-25">{p.title}</h3>
+                            <div className="f0-875 gray mb0-50">{p.category} • {p.year}</div>
+                            {p.description && <p className="lh-copy mt0-00">{p.description}</p>}
+                          </div>
+                          <div className="flex ggap0-50 mt1-00">
+                            {p.fileUrl && (
+                              <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
+                                <FiDownload className="mr0-25" /> Download
+                              </a>
+                            )}
+                            {p.externalUrl && (
+                              <a href={p.externalUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
+                                <FiExternalLink className="mr0-25" /> View online
+                              </a>
+                            )}
+                          </div>
+                        </div>
+                      </article>
+                    )
+                  )
+                )
+              }
             </section>
           </section>
         </main>

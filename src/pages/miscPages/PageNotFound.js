@@ -10,10 +10,55 @@ const PageNotFound = () => {
             </h2>
 
             <div>
-                <p className="mb2-00  ">Go to the <Link className="dib w16-00 ba ma2-00 pa1-00 tc ttu b f2-00" to = '/'>Homepage</Link></p>
-                <p className="mb2-00  ">Go to the <Link className="dib w16-00 ba ma2-00 pa1-00 tc ttu b f2-00" to = '/projects'>Projects</Link></p>
-                <p className="mb2-00  ">Go to the <Link className="dib w16-00 ba ma2-00 pa1-00 tc ttu b f2-00" to = '/practice'>Practice</Link></p>
-                <p className="mb2-00  ">Go to the <Link className="dib w16-00 ba ma2-00 pa1-00 tc ttu b f2-00" to = '/people'>People</Link></p>
+                <p className="mb2-00  "
+                >
+                    Go to the 
+                    <Link className="dib 
+                        w16-00 
+                        ma2-00 pa1-00 
+                        ba 
+                        tc ttu b f2-00" 
+                        to = '/'
+                    >
+                        homepage
+                    </Link>
+                </p>
+                <p className="mb2-00  "
+                >
+                    Go to the 
+                    <Link className="dib 
+                        w16-00 
+                        ma2-00 pa1-00 
+                        ba 
+                        tc ttu b f2-00" 
+                        to = '/projects'
+                    >
+                        Projects
+                    </Link>
+                </p>
+                <p className="mb2-00  "
+                >
+                    Go to the 
+                    <Link className="dib 
+                        w16-00 
+                        ma2-00 pa1-00 
+                        ba 
+                        tc ttu b f2-00" 
+                        to = '/practice'
+                    >
+                        Practice
+                    </Link>
+                </p>
+                <p className="mb2-00  "
+                >
+                    Go to the 
+                    <Link className="dib 
+                        w16-00 ba ma2-00 pa1-00 tc ttu b f2-00" 
+                        to = '/people'
+                    >
+                        People
+                    </Link>
+                </p>
             </div>
         </div>
     )
