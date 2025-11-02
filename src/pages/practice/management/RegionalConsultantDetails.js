@@ -21,9 +21,9 @@ const RegionalConsultantDetails = () => {
 
   useEffect(() => {
     if (rc?.name && rc?.region) {
-      document.title = `Regional Consultant — ${rc.region} — ${rc.name} | AESL`;
+      document.title = `AESL || Practice || Management || Regional Consultant || ${rc.region}`;
     } else {
-      document.title = 'Regional Consultant | AESL';
+      document.title = 'AESL || Practice || Management || Regional Consultant';
     }
   }, [rc?.name, rc?.region]);
 
@@ -45,17 +45,33 @@ const RegionalConsultantDetails = () => {
   return (
     <div className="min-vh-100 w-100">
       <header>
-        <SubCategoryHeaderBanner image={managementHeader} title={`Regional Consultant — ${rc.region}`} />
+        <SubCategoryHeaderBanner image={managementHeader} 
+          title={`Regional Consultant`} 
+          subTitle={` ${rc.region}`} />
       </header>
       <main className="ph1-00">
-        <div className="grid gtc12 ggap1-00 white-90">
+        <div className="grid gtc12 ggap1-00 white-90 mb1-00">
           <article className="gr1s1 gc1s6 pa2-00 bg-blue1">
             <figure className="shadow-5 bg-blue2 mb0-50">
-              <img loading="lazy" decoding="async" src={rc.image} alt={`${rc.name} — Regional Consultant, ${rc.region}`} className="pa0-50 bg-blue0 w-100" />
+              <img loading="lazy" 
+                decoding="async" 
+                src={rc.image} 
+                alt={`${rc.name} — Regional Consultant, ${rc.region}`} 
+                className="pa0-50 bg-blue0 w-100" 
+              />
             </figure>
             <hgroup className="pa0-50 bg-blue0">
               <h2 className="mb0-50">{rc.name}</h2>
-              <h3 className="mt0-00">{rc.region}</h3>
+              {rc.email && (
+                <p className="mt0-50 mb0-00"
+                >
+                  <a className="link white-90 underline" 
+                    href={`mailto:${rc.email}`}
+                  >
+                    {rc.email}
+                  </a>
+                </p>
+              )}
             </hgroup>
           </article>
           <article className="gr1s1 gc7s6 pa2-00 bg-blue1">

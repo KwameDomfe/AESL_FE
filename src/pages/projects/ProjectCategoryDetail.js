@@ -98,49 +98,56 @@ const ProjectCategoryDetail = () => {
                 <div id="projects"
                     className = "gc2s10 w-100 mt2-00 mb1-00"
                 >
-                    {/* Example: Render projects for current category */}
+                    {/* Group projects by subCategory and render under headings */}
                     {(() => {
                         const filteredProjects = projects.filter(p => p.category && p.category.url === category);
-                        
-                        if (filteredProjects.length === 0) {
-                            return (
-                                <div className="tc pv4-00">
-                                    <div className="bg-near-white br3 pa4-00 mv3-00">
-                                        <h3 className="f2-00 mb2-00 blue0">No Projects Available</h3>
-                                        <p className="f1-25 lh-copy mb3-00 gray">
-                                            There are currently no projects available in the {currentCategory?.name || 'this'} category.
-                                        </p>
-                                        <p className="f1-00 lh-copy mb3-00 gray">
-                                            Please check back later or explore our other project categories.
-                                        </p>
-                                        <div className="mt3-00">
-                                            <a href="/projects" className="link dim bg-blue0 white-90 pa1-00 br2 dib">
-                                                View All Projects
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            );
-                        }
-                        
+                        // Get all subcategories for the current category from projectsInfo.js
+                        const categoryInfo = require('../../data/projectsInfo').default?.find?.(cat => cat.url === category) || require('../../data/projectsInfo').projectCategories?.find?.(cat => cat.url === category);
+                        const subCategories = categoryInfo?.subCategories || [];
+                        // Group projects by normalized subCategory (lowercase)
+                        const subCategoryGroups = {};
+                        filteredProjects.forEach(project => {
+                            const subCatRaw = project.category.subCategory || 'Other';
+                            const subCat = subCatRaw.toLowerCase();
+                            if (!subCategoryGroups[subCat]) subCategoryGroups[subCat] = [];
+                            subCategoryGroups[subCat].push(project);
+                        });
                         return (
-                            <ul className="grid gtc2-s gtc3-m ggap1-00 justify-start mt2-00 mb1-00">
-                                {filteredProjects.map(
-                                    project => (
-                                        <li key={project.id} className="h-100 w-100">
-                                            <ProjectCard
-                                                name={project.name}
-                                                client={project.client}
-                                                location={project.location}
-                                                thumbnail={project.thumbnail}
-                                                description={project.overview || project.description?.p1}
-                                                url={`/projects/${project.category.url}/${project.category.subCategory}/${project.name.replace(/\s+/g, '-').toLowerCase()}`}
-                                                category={project.category}
-                                            />
-                                        </li>
-                                    )
-                                )}
-                            </ul>
+                            <div>
+                                {subCategories.map(subCatObj => {
+                                    const subCat = subCatObj.name.toLowerCase();
+                                    const projectsForSubCat = subCategoryGroups[subCat] || [];
+                                    return (
+                                        <section key={subCat} className="mb3-00">
+                                            <h2 className="f2-00 blue0 mb2-00 ttc">{subCatObj.name}</h2>
+                                            {subCatObj.overview && (
+                                                <p className="f1-25 red mb2-00">{subCatObj.overview}</p>
+                                            )}
+                                            {projectsForSubCat.length > 0 ? (
+                                                <ul className="grid gtc2-s gtc3-xl ggap1-00 justify-start mt2-00 mb1-00">
+                                                    {projectsForSubCat.map(project => (
+                                                        <li key={project.id} className="h-100 w-100">
+                                                            <ProjectCard
+                                                                name={project.name}
+                                                                client={project.client}
+                                                                location={project.location}
+                                                                thumbnail={project.thumbnail}
+                                                                description={project.overview || project.description?.p1}
+                                                                url={`/projects/${project.category.url}/${project.category.subCategory}/${project.name.replace(/\s+/g, '-').toLowerCase()}`}
+                                                                category={project.category}
+                                                            />
+                                                        </li>
+                                                    ))}
+                                                </ul>
+                                            ) : (
+                                                <div className="bg-blue0 pa2-00 br0-25 ">
+                                                    <div className="tc pv2-00 white-90 f2-00">No projects available for this subcategory.</div>
+                                                </div>
+                                            )}
+                                        </section>
+                                    );
+                                })}
+                            </div>
                         );
                     })()}
                 </div>

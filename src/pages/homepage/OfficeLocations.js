@@ -13,6 +13,8 @@ import { offices } from '../../data/offices'
 const OfficeLocations = () => {
   const [selected, setSelected] = useState(null);
   const [map, setMap] = useState(null);
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [cardPos, setCardPos] = useState({left: '50%', top: '60%'});
   const allBounds = useMemo(() => {
     try {
       return L.latLngBounds(offices.map(o => o.coords));
@@ -21,15 +23,37 @@ const OfficeLocations = () => {
     }
   }, []);
 
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Update card position when marker is selected in mobile view
+  useEffect(() => {
+    if (selected && windowWidth < 900) {
+      // Center the card on the screen in mobile view
+      setCardPos({
+        left: '50vw',
+        top: '50vh'
+      });
+    }
+  }, [map, selected, windowWidth]);
+
   // Fly to the selected office when it changes
   useEffect(() => {
-    if (!map || !selected) return;
-    try {
-      map.flyTo(selected.coords, 8, { duration: 0.6 });
-    } catch (e) {
-      // ignore
+    if (!map) return;
+    if (windowWidth < 900) {
+      // Always center Ghana in mobile view
+      map.setView([7.9465, -1.0232], 7);
+    } else if (selected) {
+      try {
+        map.flyTo(selected.coords, 8, { duration: 0.6 });
+      } catch (e) {
+        // ignore
+      }
     }
-  }, [map, selected]);
+  }, [map, selected, windowWidth]);
   // Memoize icons to avoid re-creating on each render
   const regionalIcon = useMemo(() => L.icon({
     iconUrl: markerIcon,
@@ -56,21 +80,31 @@ const OfficeLocations = () => {
   }), []);
   return (
     <section className="vh-100" style={{padding: '2rem 0'}}>
-      <div className="flex h-100 w-100" >
-        <div className='h-100 w-100' 
+      <div
+        className="flex h-100 w-100 flex-column flex-row-ns"
+        style={{display: 'flex', flexDirection: windowWidth < 900 ? 'column' : 'row', height: '100%', width: '100%'}}>
+        <div
+          className='h-100 w-100'
           style={{
-            flex: '2 1 400px', 
-            height: '100%', 
-            overflow: 'hidden', 
-            boxShadow: '0 2px 12px rgba(59,130,246,0.08)', 
-            position: 'relative', 
-            background: '#e0e7ef'
+            flex: windowWidth < 900 ? 'none' : '2 1 400px',
+            height: windowWidth < 900 ? '100vh' : '100%',
+            minHeight: windowWidth < 900 ? '100vh' : '0',
+            maxHeight: windowWidth < 900 ? '100vh' : 'none',
+            overflow: 'hidden',
+            boxShadow: '0 2px 12px rgba(59,130,246,0.08)',
+            position: 'relative',
+            background: '#e0e7ef',
+            width: windowWidth < 900 ? '100vw' : '100%',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            margin: windowWidth >= 900 ? '0 auto' : undefined
           }}
         >
           <MapContainer
             center={[7.9465, -1.0232]}
             zoom={7}
-            style={{height:'100%',width:'100%', cursor: 'default'}}
+            style={{height: windowWidth < 900 ? '100vh' : '100%', minHeight: windowWidth < 900 ? '100vh' : '0', maxHeight: windowWidth < 900 ? '100vh' : 'none', width: windowWidth < 900 ? '100vw' : '100%', cursor: 'default', margin: windowWidth < 900 ? '0 auto' : undefined}}
             className="blue-map"
             scrollWheelZoom={false}
             zoomControl={false}
@@ -95,9 +129,56 @@ const OfficeLocations = () => {
                 title={office.name}
                 eventHandlers={{ click: () => setSelected(office) }}
               >
-                <Popup>
-                  <strong>{office.name}</strong>
-                </Popup>
+                {/* Only show Leaflet popup in desktop view */}
+                {windowWidth >= 900 && (
+                  <Popup>
+                    <strong>{office.name}</strong>
+                  </Popup>
+                )}
+                {/* Show details next to marker in mobile view */}
+                {selected && selected.name === office.name && windowWidth < 900 && (
+                  <div
+                    style={{
+                      position: 'fixed',
+                      left: cardPos.left,
+                      top: cardPos.top,
+                      transform: 'translate(-50%, -50%)',
+                      zIndex: 3000,
+                      background: '#fff',
+                      borderRadius: '10px',
+                      boxShadow: '0 2px 12px rgba(59,130,246,0.18)',
+                      padding: '1rem',
+                      minWidth: '220px',
+                      maxWidth: '90vw',
+                    }}
+                  >
+                    <strong style={{fontSize: '1.2rem', color: '#0f172a'}}>{selected.name}</strong>
+                    <div style={{color: '#334155', marginTop: '0.25rem', lineHeight: 1.35}}>
+                      {selected.address1 && <div>{selected.address1}</div>}
+                      {selected.address2 && <div>{selected.address2}</div>}
+                      {selected.address3 && <div>{selected.address3}</div>}
+                    </div>
+                    {selected.email && (
+                      <div style={{marginTop: '0.5rem'}}>
+                        <span style={{color: '#475569'}}>Email: </span>
+                        <a href={`mailto:${selected.email}`} style={{color: '#2563eb'}}>{selected.email}</a>
+                      </div>
+                    )}
+                    {selected.telephone && (
+                      <div style={{marginTop: '0.25rem'}}>
+                        <span style={{color: '#475569'}}>Telephone: </span>
+                        <a href={`tel:${selected.telephone.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.telephone}</a>
+                      </div>
+                    )}
+                    {selected.mobile && (
+                      <div style={{marginTop: '0.25rem'}}>
+                        <span style={{color: '#475569'}}>Mobile: </span>
+                        <a href={`tel:${selected.mobile.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.mobile}</a>
+                      </div>
+                    )}
+                    <button onClick={() => setSelected(null)} style={{marginTop: '0.75rem', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '0.5rem 0.75rem', cursor: 'pointer'}}>Clear</button>
+                  </div>
+                )}
               </Marker>
             ))}
           </MapContainer>
@@ -134,49 +215,57 @@ const OfficeLocations = () => {
             </div>
           </div>
         </div>
-        <div className='h-100' style={{flex: '1 1 320px', minWidth: '260px', maxWidth: '360px'}}>
-          <div style={{background: '#fff', borderRadius: '10px', boxShadow: '0 2px 12px rgba(59,130,246,0.08)', padding: '1rem'}}>
-            { 
-              selected ? (
-                <div
-                >
-                  <strong style={{fontSize: '1.2rem', color: '#0f172a'}}
-                  >
-                    {selected.name}
-                  </strong>
-                  <div style={{color: '#334155', marginTop: '0.25rem', lineHeight: 1.35}}>
-                    {selected.address1 && <div>{selected.address1}</div>}
-                    {selected.address2 && <div>{selected.address2}</div>}
-                    {selected.address3 && <div>{selected.address3}</div>}
+        {/* Sidebar for desktop view */}
+        {windowWidth >= 900 && (
+          <div
+            className='h-100 w-100'
+            style={{
+              flex: 'none',
+              minWidth: '0',
+              maxWidth: '360px',
+              marginLeft: '1.5rem',
+              width: '100%'
+            }}
+          >
+            <div style={{background: '#fff', borderRadius: '10px', boxShadow: '0 2px 12px rgba(59,130,246,0.08)', padding: '1rem'}}>
+              { 
+                selected ? (
+                  <div>
+                    <strong style={{fontSize: '1.2rem', color: '#0f172a'}}>{selected.name}</strong>
+                    <div style={{color: '#334155', marginTop: '0.25rem', lineHeight: 1.35}}>
+                      {selected.address1 && <div>{selected.address1}</div>}
+                      {selected.address2 && <div>{selected.address2}</div>}
+                      {selected.address3 && <div>{selected.address3}</div>}
+                    </div>
+                    {selected.email && (
+                      <div style={{marginTop: '0.5rem'}}>
+                        <span style={{color: '#475569'}}>Email: </span>
+                        <a href={`mailto:${selected.email}`} style={{color: '#2563eb'}}>{selected.email}</a>
+                      </div>
+                    )}
+                    {selected.telephone && (
+                      <div style={{marginTop: '0.25rem'}}>
+                        <span style={{color: '#475569'}}>Telephone: </span>
+                        <a href={`tel:${selected.telephone.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.telephone}</a>
+                      </div>
+                    )}
+                    {selected.mobile && (
+                      <div style={{marginTop: '0.25rem'}}>
+                        <span style={{color: '#475569'}}>Mobile: </span>
+                        <a href={`tel:${selected.mobile.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.mobile}</a>
+                      </div>
+                    )}
+                    <button onClick={() => setSelected(null)} style={{marginTop: '0.75rem', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '0.5rem 0.75rem', cursor: 'pointer'}}>Clear</button>
                   </div>
-                  {selected.email && (
-                    <div style={{marginTop: '0.5rem'}}>
-                      <span style={{color: '#475569'}}>Email: </span>
-                      <a href={`mailto:${selected.email}`} style={{color: '#2563eb'}}>{selected.email}</a>
+                ) : (
+                    <div style={{color: '#475569'}}>
+                      Click any marker on the map to view office details here.
                     </div>
-                  )}
-                  {selected.telephone && (
-                    <div style={{marginTop: '0.25rem'}}>
-                      <span style={{color: '#475569'}}>Telephone: </span>
-                      <a href={`tel:${selected.telephone.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.telephone}</a>
-                    </div>
-                  )}
-                  {selected.mobile && (
-                    <div style={{marginTop: '0.25rem'}}>
-                      <span style={{color: '#475569'}}>Mobile: </span>
-                      <a href={`tel:${selected.mobile.replace(/[^+\d]/g, '')}`} style={{color: '#2563eb'}}>{selected.mobile}</a>
-                    </div>
-                  )}
-                  <button onClick={() => setSelected(null)} style={{marginTop: '0.75rem', background: '#f1f5f9', border: '1px solid #e2e8f0', borderRadius: '6px', padding: '0.5rem 0.75rem', cursor: 'pointer'}}>Clear</button>
-                </div>
-              ) : (
-                  <div style={{color: '#475569'}}>
-                    Click any marker on the map to view office details here.
-                  </div>
-                )
-            }
+                  )
+              }
+            </div>
           </div>
-        </div>
+        )}
       </div>
     </section>
   );

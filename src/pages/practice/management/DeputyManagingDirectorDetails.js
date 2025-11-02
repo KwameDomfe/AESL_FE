@@ -6,19 +6,25 @@ import managementHeader from '../../../images/practice/management/00.jpeg'
 import { deputyManagingDirectors } from '../../../data/managementInfo'
 
 const DeputyManagingDirectorDetails = () => {
+    
     const { id } = useParams();
+    
     const dmd = deputyManagingDirectors.find(d => d.key === id) || deputyManagingDirectors[0];
+   
     useEffect(() => {
         const titlePart = dmd?.title ? ` — ${dmd.title}` : '';
-        document.title = `Deputy Managing Director${titlePart} | AESL`;
+        document.title = `AESL || Deputy Managing Director ${titlePart} `;
     }, [dmd?.title]);
+    
     return (
         <div id=""
             className="min-vh-100 w-100">
         
             {/* <!-- Page Header --> */}
             <header>
-                <SubCategoryHeaderBanner image={managementHeader} title={`Deputy Managing Director — ${dmd.title}`} />
+                <SubCategoryHeaderBanner image={managementHeader} 
+                    title={`Deputy Managing Director`} 
+                    subTitle={dmd.title} />
             </header>
             {/* <!-- Page Header --> */}
             
@@ -39,9 +45,9 @@ const DeputyManagingDirectorDetails = () => {
                         <div id="managing_director_summary"
                             className="pt2-00"
                         >
-                            <div id="pageNav"
+                             <div id="pageNav"
                             className="grid gtc12 gc1s12 ggap1-00
-                                white-90 ph4-00 mb2-00
+                                white-90 mb2-00
                                 tracked-tight"
                             >
                                 <article id="people_nav1" 
@@ -49,29 +55,38 @@ const DeputyManagingDirectorDetails = () => {
                                     h10-00 w10-00
                                     f1-00 bg-blue0"
                                 >
-                                    <hgroup id=""
-                                        className="
+                                    <h2 id=""
+                                        className="flex items-center justify-center
                                             w-100 h-100 
                                             pa1-00
                                             bg-green
                                             "
-                                    >   <h3>Contact</h3> 
-                                    </hgroup> 
+                                    >
+                                
+                                        <a
+                                            href={"/documents/cv/deputy-managing-director-cv.pdf"}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="white-90 f1-50"
+                                        >
+                                            CV
+                                        </a>
+                                       
+                                        
+                                    </h2>
                                 </article>
 
                                 <article id="brief_summary" 
                                     className="gr1s1 gc3s10
                                     h10-00 w-100
                                     pa1-00
-                                    f1-25 bg-blue0"
-                                >
-                                    <div className="flex flex-column">
-                                        <h3 className="mt0-00 mb0-25">{dmd.name || 'Deputy Managing Director'}</h3>
-                                        <h4 className="mt0-00 mb0-50">{dmd.title}</h4>
-                                        {dmd.email && (
-                                            <a className="link blue0 underline" href={`mailto:${dmd.email}`}>{dmd.email}</a>
-                                        )}
-                                    </div>
+                                    f1-25 bg-blue0
+                                    ">
+                                    <p>
+                                        " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, error magnam. Impedit tempore earum debitis quae vero quo. Magnam, facere. Ea, explicabo blanditiis, unde veniam architecto fuga rem quas odit? "
+                                    </p>
+                                    <span className=" b i">- {dmd.name} -</span>
+
                                 </article>
                             </div>
                         </div>

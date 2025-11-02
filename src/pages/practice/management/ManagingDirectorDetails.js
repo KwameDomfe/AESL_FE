@@ -6,14 +6,16 @@ import managementHeader from '../../../images/practice/management/00.jpeg'
 import { managingDirector } from '../../../data/managementInfo'
 
 const ManagingDirectorDetails = () => {
+    
     const currentMD = managingDirector;
     useEffect(() => {
         if (currentMD?.name && currentMD?.title) {
-            document.title = `${currentMD.title} — ${currentMD.name} | AESL`;
+            document.title = `AESL || ${currentMD.title} — ${currentMD.name}`;
         } else {
-            document.title = 'Managing Director | AESL';
+            document.title = 'AESL || Managing Director';
         }
     }, [currentMD?.name, currentMD?.title]);
+
     return (
         <div id=""
             className="min-vh-100 w-100">
@@ -43,7 +45,7 @@ const ManagingDirectorDetails = () => {
                         >
                             <div id="pageNav"
                             className="grid gtc12 gc1s12 ggap1-00
-                                white-90 ph4-00 mb2-00
+                                white-90 mb2-00
                                 tracked-tight"
                             >
                                 <article id="people_nav1" 
@@ -51,24 +53,38 @@ const ManagingDirectorDetails = () => {
                                     h10-00 w10-00
                                     f1-00 bg-blue0"
                                 >
-                                    <hgroup id=""
-                                        className="
+                                    <h2 id=""
+                                        className="flex items-center justify-center
                                             w-100 h-100 
                                             pa1-00
                                             bg-green
                                             "
-                                    >   <h3>CV</h3> 
-                                    </hgroup> 
-                                    </article>
-
-                                    <article id="brief_summary" 
-                                        className="gr1s1 gc3s10
-                                        h10-00 w-100
-                                        pa1-00
-                                        f1-25 bg-blue0
-                                        ">
-                                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, error magnam. Impedit tempore earum debitis quae vero quo. Magnam, facere. Ea, velit ut earum voluptas commodi autem explicabo blanditiis, unde veniam architecto fuga rem quas debitis animi doloribus maiores ullam, molestias incidunt eum odit? Quod similique quae impedit accusamus nisi?
+                                    >
                                 
+                                        <a
+                                            href={"/documents/cv/managing-director-cv.pdf"}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="white-90 f1-50"
+                                        >
+                                            CV
+                                        </a>
+                                       
+                                        
+                                    </h2>
+                                </article>
+
+                                <article id="brief_summary" 
+                                    className="gr1s1 gc3s10
+                                    h10-00 w-100
+                                    pa1-00
+                                    f1-25 bg-blue0
+                                    ">
+                                    <p>
+                                        " Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam, error magnam. Impedit tempore earum debitis quae vero quo. Magnam, facere. Ea, explicabo blanditiis, unde veniam architecto fuga rem quas odit? "
+                                    </p>
+                                    <span className=" b i">- {currentMD.name} -</span>
+
                                 </article>
                             </div>
                         </div>

@@ -161,7 +161,7 @@ export const projects = [
     {   "id": "2",
         "name" : "Proposed Regional Coordinating Council Administration Block",
         "location" : "New Regional Capitals",
-    "thumbnail" :"/images/projects/civic_and_culture/civic/rcc/00.PNG",
+        "thumbnail" :"/images/projects/civic_and_culture/civic/rcc/00.PNG",
         "overview" : "The RCC administration block is being constructed for six newly created regions, including Goaso - Ahafo, Nalerigu - NorthEast, Dambai - Oti, Damongo - Savannah, and Sefwi Wiawso - Western North. As the regional capital, it houses all RCC departments and state institutions to ensure effective and efficient administration, it includs conference halls, meeting rooms, canteens, and store rooms.",
         "category" : {
             "name" :"Civic and Culture",
@@ -261,10 +261,10 @@ export const projects = [
             "Concept2":"Concept2 Project Concept Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "Concept3":"Concept3 Project Concept Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "ConceptGallery":[
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_0.jpg",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_3.jpg",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_5.jpg",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_7.jpg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg"
             ]
         },
         "projectDesign" : {
@@ -272,10 +272,11 @@ export const projects = [
             "design2":"Design1 Project Design Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "design3":"Design1 Project Design Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "designGallery": [
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_1.png",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_2.png",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_4.jpeg",
-                "/images/projects/civic_and_culture/civic/rcc/renderings/rendering_6.jpg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg"
             ]
         },
         "projectConstruction" : {
@@ -517,20 +518,20 @@ export const projects = [
             "p3" :"The Appiatse Redevelopment Scheme is a testament to AESL's commitment to social responsibility and community development."
         },
         "visuals" : [
-            "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_0.jpeg",
-            "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_1.jpeg",
-            "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_2.jpeg",
-            "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_3.jpeg"
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg"
         ],
         "projectConcept" : {
             "Concept1":"",
             "Concept2":"",
             "Concept3":"",
             "ConceptGallery":[
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_0.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_1.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_2.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_3.jpeg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg"
             ]
 
         },
@@ -539,10 +540,10 @@ export const projects = [
             "design2":"",
             "design3":"",
             "designGallery": [
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_4.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_5.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_6.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_7.jpeg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg"
             ]
         },
         "projectConstruction" : {
@@ -550,14 +551,41 @@ export const projects = [
             "construction2":"Construction2 Project Construction Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "construction3":"Construction2 Project Construction Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "constructionGallery": [
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_0.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_1.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_2.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_3.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_4.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_5.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_6.jpeg",
-                "/images/projects/industrial_and_infrastructure/industrial/foundry_MESTI/construction/construction_7.jpeg"
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/01.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/02.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/03.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/04.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/05.jpg",
+                    "/images/projects/landscape_planning_and_survey/planning/Appiatse/aerialphotographs/06.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Community/01.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Community/02.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Community/03.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/01.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/02.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/03.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/04.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/05.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/06.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/07.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/construction/08.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/01.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/02.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/03.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/04.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/05.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/06.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/07.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/08.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/09.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/10.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/Consultants/11.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/01.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/02.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/03.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/04.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/05.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/06.jpg",
+                "/images/projects/landscape_planning_and_survey/planning/Appiatse/streetviews/07.jpg",
             ]
         },
         "coordinates":[5.585, -2.046389],
@@ -713,20 +741,20 @@ export const projects = [
             "p3" :"AESL was engaged to represent the interest of the Government of Ghana (GoG) in the supervision and construction of the Saglemi Housing project in the effort to provide mass housing to reduce the housing deficit. The project is located along the Accra-Aflao road and is approximately 40 kilometers from the Accra Central Business District (CBD). The project when completed will provide about 5,000 housing units of various types including 2-bedroom, 3-bedroom, and 4-bedroom houses."
         },
         "visuals" : [
-            "../../images/projects/civic_and_culture/civic/1_0.jpg",
-            "../../images/projects/civic_and_culture/civic/1_0.jpg",
-            "../../images/projects/civic_and_culture/civic/1_0.jpg"
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg",
+            "/images/placeholders/regular_images/sky.jpg"
         ],
         "projectConcept" : {
             "Concept1":"",
             "Concept2":"",
             "Concept3":"",
             "ConceptGallery":[
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg"
-            ]
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",            ]
 
         },
         "projectDesign" : {
@@ -734,10 +762,10 @@ export const projects = [
             "design2":"",
             "design3":"",
             "designGallery": [
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg"
             ]
         },
         "projectConstruction" : {
@@ -745,10 +773,10 @@ export const projects = [
             "construction2":"Construction2 Project Construction Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "construction3":"Construction2 Project Construction Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,",
             "constructionGallery": [
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg",
-                "../../images/projects/civic_and_culture/civic/1_0.jpg"
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
+                "/images/placeholders/regular_images/sky.jpg",
             ]
         },
         "coordinates":[5.8300, 0.2],
@@ -770,12 +798,12 @@ export const projectCategories = [
             {
                 name :"civic",
                 image :{},
-               overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+               overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
                 name :"culture",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ],
 
@@ -792,17 +820,17 @@ export const projectCategories = [
         subCategories : [
             {   name :"basic",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Basic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
                 name :"junior high",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Junior High ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
                 name :"senior high",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Senior High ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -816,14 +844,14 @@ export const projectCategories = [
             "Mostly for our district health centres our designs have sought to integrate the lifestyle of the local community with modernity."
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"polyclinic",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Polyclinic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
-                name :"culture",
+                name :"teaching hospital",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Teaching Hospital ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -837,14 +865,19 @@ export const projectCategories = [
             "From shopping centres to multi-functional developments, our Retail and Mixed-Use projects combine commerce, living, and leisure. We create vibrant spaces that serve diverse needs and elevate urban experiences."
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"office",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Office ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
-                name :"culture",
+                name :"Retail",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Retail ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            },
+            {
+                name :"mixed-use",
+                image :{},
+                overview: "Mixed-Use ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -858,14 +891,19 @@ export const projectCategories = [
             "We are distinguished in the design and the supervision of resettlements and have been engaged on many disaster recovery projects including the resettlements of Appiatse, the Akosombo Dam Spillage and many other district resettlements projects."
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"Detached",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Detached ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
             },
             {
-                name :"culture",
+                name :"Semi-Detached",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Semi-Detached ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
+            },
+            {
+                name :"Apartments",
+                image :{},
+                overview: "Apartments ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -879,14 +917,14 @@ export const projectCategories = [
             "Our unmatched expertise in many speciality projects was evident in our selection to collaborate with the Ministry of Science, Technology and Innovation (MESTI) to design and supervise the construction of the first Foundry and Tooling Centre in Ghana."
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"industrial",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Industrial ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
-                name :"culture",
+                name :"infrastructure",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Infrastructure ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -900,14 +938,14 @@ export const projectCategories = [
             ""
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"Hotels",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Hotels ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
-                name :"culture",
+                name :"Restaurants",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Restaurants ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae, It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },
@@ -921,14 +959,14 @@ export const projectCategories = [
             "Our expertise on sport facilities have been uncommon and have consulted on the Kumasi and Essipong stadia to bring them to satisfactory standards."
         ],
         subCategories : [
-            {   name :"civic",
+            {   name :"Sports",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Sports ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
             },
             {
-                name :"culture",
+                name :"Leisure",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Leisure ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. "
             }
         ]
     },
@@ -944,17 +982,17 @@ export const projectCategories = [
         subCategories : [
             {   name :"landscapes",
                 image :{},
-                overview: "Civic ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Landscapes ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
                 name :"planning",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Planning ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             },
             {
                 name :"surveys",
                 image :{},
-                overview: "Culture ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,"
+                overview: "Surveys ipsum dolor sit amet consectetur adipisicing elit. Iure veniam molestiae,It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English."
             }
         ]
     },

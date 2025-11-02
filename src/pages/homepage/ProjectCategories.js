@@ -38,131 +38,71 @@ const ProjectCategories = () => {
                                 bg-blue0"
                         >
                             <div id="projectCategories__civicAndCulture"
-                                className="gr1s1 gc1s12
-                                    gc1s6-s
-                                    gr1s3-m gc1s3-m 
-                                    grid items-center justify-center
-                                    white-90"
-                            >
+                                className="gr1s1 gc1s12 gc1s6-s gr1s3-m gc1s3-m grid items-center justify-center white-90">
                                 <ProjectCategoryCard 
                                     url='projects/civic-and-culture'
                                     image={civicAndCulture}
                                     caption='Civic and Culture'
                                 />
                             </div>
-                            
                             <div id="projectCategories__education"
-                                className="gr2s1 gc1s12 
-                                    gr1s1-s gc7s6-s 
-                                    gr1s3-m gc4s3-m 
-                                    grid items-center justify-center
-                                    white-90"
-                            >
+                                className="gr2s1 gc1s12 gr1s1-s gc7s6-s gr1s3-m gc4s3-m grid items-center justify-center white-90">
                                 <ProjectCategoryCard 
                                     url='projects/education'
                                     image={education}
                                     caption='Education'
                                 />
                             </div>
-
                             <div id="projectCategories__health" 
-                                className="gr3s1 gc1s12 
-                                    gr2s1-s gc1s6-s 
-                                    gr1s3-m gc7s3-m
-                                    grid items-center justify-center"
-                            >
+                                className="gr3s1 gc1s12 gr2s1-s gc1s6-s gr1s3-m gc7s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
                                     url='projects/health'
                                     image={health}
                                     caption='Health'
                                 />
-                            </div> 
-                                
-                            <div id="projectCategories__officeAndMixedUse" 
-                                className="gr4s1 gc1s12
-                                    gr2s1-s gc7s6-s
-                                    gr1s3-m gc10s3-m
-                                    grid items-center justify-center
-                                    r"
-                            >
+                            </div>
+                            <div id="projectCategories__officeRetailAndMixedUse" 
+                                className="gr4s1 gc1s12 gr2s1-s gc7s6-s gr1s3-m gc10s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
-                                    url='projects/office-and-mixed-use'
+                                    url='projects/office-retail-and-mixed-use'
                                     image={office_and_mixed_use}
-                                    caption='Office and Mixed-Use'
+                                    caption='Office Retail and Mixed-Use'
                                 />
                             </div>
-            
-                            <div id="projectCategories__industrialAndRetail" 
-                                className="gr5s1 gc1s12
-                                    gr3s1-s gc1s6-s
-                                    gr4s3-m gc1s3-m
-                                    grid items-center justify-center"
-                            >
+                            <div id="projectCategories__industrialAndInfrastructure" 
+                                className="gr5s1 gc1s12 gr3s1-s gc1s6-s gr4s3-m gc1s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
-                                    url='projects/industrial-and-retail'
-                                    image={industrial_and_retail}
-                                    caption='Industrial and Retail'
+                                    url='projects/industrial-and-infrastructure'
+                                    image={infrastructure_and_survey}
+                                    caption='Industrial and Infrastructure'
                                 />
                             </div>
-                            
                             <div id="projectCategories__hospitality" 
-                                className="gr6s1 gc1s12
-                                    gr3s1-s gc7s6-s
-                                    gr4s3-m  gc10s3-m
-                                    grid items-center justify-center" 
-                            >
+                                className="gr6s1 gc1s12 gr3s1-s gc7s6-s gr4s3-m gc10s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
                                     url='projects/hospitality'
                                     image={hospitality}
                                     caption='Hospitality'
                                 />
                             </div>
-                            
-                            <div id="projectCategories__infrastructureAndSurvey" 
-                                className="gr7s1 gc1s12
-                                    gr4s1-s gc1s6-s
-                                    gr7s3-m gc4s3-m
-                                    grid items-center justify-center "
-                            >
-                                <ProjectCategoryCard 
-                                    url='projects/infrastructure-and-survey'
-                                    image={infrastructure_and_survey}
-                                    caption='Infrastructure and Survey'
-                                />
-                            </div>
-                            
                             <div id="projectCategories__residential" 
-                                className="gr8s1 gc1s12
-                                    gr4s1-s gc7s6-s
-                                    gr7s3-m gc10s3-m
-                                    grid items-center justify-center"
-                            >
+                                className="gr7s1 gc1s12 gr4s1-s gc1s6-s gr7s3-m gc4s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
                                     url='projects/residential'
                                     image={residential}
-                                    caption='residential'
+                                    caption='Residential'
                                 />
                             </div>
-                            
-                            <div id="projectCategories__landscapeAndMmasterplanning" 
-                                className="gr9s1 gc1s12
-                                    gr5s1-s gc1s6-s
-                                    gr7s3-m gc7s3-m
-                                    grid items-center justify-center"
-                            >
+                            <div id="projectCategories__landscapesPlanningSurvey" 
+                                className="gr8s1 gc1s12 gr4s1-s gc7s6-s gr7s3-m gc10s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
-                                    url='projects/landscape-and-master-planning'
+                                    url='projects/landscapes-planning-and-survey'
                                     image={landscape_and_master_planning}
-                                    caption='landscape and master-planning'
+                                    caption='Landscapes, Planning and Survey'
                                 />
                             </div>
-                            
                             <div id="projectCategories__sportsAndLeisure" 
-                                className="gr10s1 gc1s12
-                                    gr5s1-s gc7s6-s
-                                    gr7s3-m gc1s3-m
-                                    grid items-center justify-center"
-                            >
+                                className="gr9s1 gc1s12 gr5s1-s gc1s6-s gr7s3-m gc7s3-m grid items-center justify-center">
                                 <ProjectCategoryCard 
                                     url='projects/sports-and-leisure'
                                     image={sports_and_leisure}

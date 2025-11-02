@@ -17,12 +17,11 @@ const AESL_Address = () => {
             w-100 mb1-00"
     >
         <img src={aesl_logo} 
-                alt=""
+                alt="AESL Logo"
                 className="br4-00 w3-00 mb1-00 "
         />
         <div itemProp="name" className="tc ttu b">
             AESL <br /> Head Office
-
         </div>
     </figure>
 
@@ -50,26 +49,26 @@ const AESL_Address = () => {
         </span>
     </address>
     <div id="aesl_address--email"
-        className="flex flex-column justify-center 
-            w-80 items-center
+        className="flex flex-column justify-center items-center
+            w-80 
+            mb1-00
             f0-75"
     >
-        <Link  to="/" 
-            title="Get In Touch on WhatsApp" 
-            target="_blank" 
+        <a href="mailto:info@aesl.com" 
+            title="Email AESL" 
             className="tc"
             rel="noopener noreferrer"
         >
-            <p className="flex items-center justify-between 
+            <span className="flex items-center justify-between 
                 w-100
                 pv0-25 ph1-00
                 ba br5-00 white-90 
                 b b--white-90"
             > 
-                <TfiEmail className='f1-00 gc2s1 mr0-50' />
+                <TfiEmail className='f1-00 gc2s1 mr0-50' aria-label="Email icon" />
                 info@aesl.com 
-            </p>
-        </Link>
+            </span>
+        </a>
     </div>
     <p className="lh-copy tj i">
         The Architectural & Engineering Services Limited (AES Ltd) initially came to be known as AESC when consultancy services were separated from the Public Works Department (PWD) under NRCD 193, 1973. 

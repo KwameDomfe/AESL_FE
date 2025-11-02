@@ -26,9 +26,9 @@ const HODDetails = () => {
   
   useEffect(() => {
     if (hod?.name && hod?.role) {
-      document.title = `Head of Department — ${hod.role} — ${hod.name} | AESL`;
+      document.title = `AESL || Practice || Management || Head of Department || ${hod.role}`;
     } else {
-      document.title = 'Head of Department | AESL';
+      document.title = ' AESL || Practice || Management || Head of Department';
     }
   }, [hod?.name, hod?.role]);
 
@@ -41,7 +41,11 @@ const HODDetails = () => {
         <main className="pa2-00">
           <h2 className="red">Head of Department not found</h2>
           <p className="mb1-00">No entry found for id: {id}</p>
-          <Link className="blue0" to="/practice/management">Back to Management</Link>
+          <Link className="blue0" 
+            to="/practice/management"
+          >
+            Back to Management
+          </Link>
         </main>
       </div>
     );
@@ -50,21 +54,34 @@ const HODDetails = () => {
   return (
     <div className="min-vh-100 w-100">
       <header>
-        <SubCategoryHeaderBanner image={managementHeader} title={`Head of Department — ${hod.role}`} />
+        <SubCategoryHeaderBanner image={managementHeader} 
+        title={`Head of Department `} 
+        subTitle={`${hod.role}`}
+        />
       </header>
 
       <main className="ph1-00">
-        <div className="grid gtc12 ggap1-00 white-90">
+        <div className="grid gtc12 ggap1-00 white-90 mb1-00">
           <article className="gr1s1 gc1s6 pa2-00 bg-blue1">
             <figure className="shadow-5 bg-blue2 mb0-50">
-              <img loading="lazy" decoding="async" src={hod.image} alt={`${hod.name} — ${hod.role}`} className="pa0-50 bg-blue0 w-100" />
+              <img loading="lazy" 
+                decoding="async"
+                src={hod.image} 
+                alt={`${hod.name} — ${hod.role}`} 
+                className="pa0-50 bg-blue0 w-100" 
+              />
             </figure>
             <hgroup className="pa0-50 bg-blue0">
               <h2 className="mb0-50">{hod.name}</h2>
-              <h3 className="mt0-00">{hod.role}</h3>
+              {/* <h3 className="mt0-00">{hod.role}</h3> */}
               {hod.email && (
-                <p className="mt0-50 mb0-00">
-                  <a className="link blue0 underline" href={`mailto:${hod.email}`}>{hod.email}</a>
+                <p className="mt0-50 mb0-00"
+                >
+                  <a className="link white-90 underline" 
+                    href={`mailto:${hod.email}`}
+                  >
+                    {hod.email}
+                  </a>
                 </p>
               )}
             </hgroup>

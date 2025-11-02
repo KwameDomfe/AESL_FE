@@ -27,7 +27,7 @@ const MainFooter = () => {
             >
                 <section id="description_and_address"
                     className="gr2s1 gc1s12 ggap1-00
-                        flex flex-column flex-row-s flex-start ggap2-00 
+                        flex flex-column flex-row-s flex-start ggap1-00 
                         w-100
                         f1-00 tj"
                 >

@@ -440,8 +440,8 @@ const Management = () => {
                                                 email={data.email}
                                                 link={data.link}
                                                 image={data.image}
-                                                textclassName={textClass}
-                                                imageclassName={imageClass}
+                                                textClass={textClass}
+                                                imageClass={imageClass}
                                                 imageClassName={imageClassName}
                                                 containerAs={containerAs}
                                                 altText={altText}
@@ -467,8 +467,8 @@ const Management = () => {
                                                 email={data.email}
                                                 link={data.link}
                                                 image={data.image}
-                                                textclassName={textClass}
-                                                imageclassName={imageClass}
+                                                textClass={textClass}
+                                                imageClass={imageClass}
                                                 imageClassName={imageClassName}
                                                 containerAs={containerAs}
                                                 altText={altText}
@@ -534,8 +534,8 @@ const Management = () => {
                                                 email={data.email}
                                                 link={data.link}
                                                 image={data.image}
-                                                textclassName={textClass}
-                                                imageclassName={imageClass}
+                                                textClass={textClass}
+                                                imageClass={imageClass}
                                                 imageClassName={imageClassName}
                                                 containerAs={containerAs}
                                                 altText={`${data.name} — Regional Consultant, ${data.region}`}

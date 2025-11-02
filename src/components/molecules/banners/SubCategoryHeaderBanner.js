@@ -19,8 +19,11 @@ const SubCategoryHeaderBanner = (props) => {
                 <h2 className="
                     mb0-25 f2-50 f3-00-s ttu tl"
                 >
-                    {title}<span className="f2-00"> {subTitle}</span>
+                    {title}
                 </h2>
+                <h3 className="ttu">
+                    <span className="f2-00">{subTitle}</span>
+                </h3>
             </hgroup>
         </section>
     )

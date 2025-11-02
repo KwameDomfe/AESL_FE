@@ -10,6 +10,8 @@ const PoweredBy = () => {
     <small className="mb0-50">powered by:</small>
     <a href="https://www.kdadesign.tech"
         className="white-90"
+        target="_blank"
+        rel="noopener noreferrer"
     >
         <div className="flex">
             <small className="">

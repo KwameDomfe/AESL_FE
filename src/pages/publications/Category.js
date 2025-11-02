@@ -23,7 +23,9 @@ function PublicationsCategory() {
   const [cat, setCat] = useState(category ? slugToLabel[category] || 'All' : 'All');
 
   // Make header and overview reactive to filter
-  const currentLabel = cat === 'All' ? 'All Publications' : cat;
+  const currentLabel = cat === 'All' 
+    ? 'All Publications' 
+    : cat;
   const currentOverview = cat === 'All'
     ? null
     : publicationCategories.find(catObj => catObj.name === cat)?.overview;
@@ -35,18 +37,23 @@ function PublicationsCategory() {
   const navBg = 'bg-blue0';
   const footerBg = 'bg-blue0';
 
-  useEffect(() => {
-    document.title = `${currentLabel} | AESL`;
-  }, [currentLabel]);
+  useEffect(
+    () => {
+      document.title = `AESL || ${currentLabel}`;
+    }, 
+    [currentLabel]
+  );
 
   // Update 'cat' when the route param 'category' changes
-  useEffect(() => {
-    if (category && slugToLabel[category]) {
-      setCat(slugToLabel[category]);
-    } else {
-      setCat('All');
-    }
-  }, [category]);
+  useEffect(
+    () => {
+      if (category && slugToLabel[category]) {
+        setCat(slugToLabel[category]);
+      } else {
+        setCat('All');
+      }
+    }, [category]
+  );
 
   // Reset year filter to 'All' only when switching to a specific category, not when switching to 'All Publications'
   useEffect(() => {
@@ -59,9 +66,15 @@ function PublicationsCategory() {
   // Filter publications by category, year, and search query
   const filtered = useMemo(() => {
     let pubs = allPublications;
-    if (cat !== 'All') pubs = pubs.filter(p => p.category === cat);
-    if (year !== 'All') pubs = pubs.filter(p => String(p.year) === String(year));
-    if (q) pubs = pubs.filter(p => (p.title + p.description).toLowerCase().includes(q.toLowerCase()));
+    if (cat !== 'All') pubs = pubs.filter(
+      p => p.category === cat
+    );
+    if (year !== 'All') pubs = pubs.filter(
+      p => String(p.year) === String(year)
+    );
+    if (q) pubs = pubs.filter(
+      p => (p.title + p.description).toLowerCase().includes(q.toLowerCase())
+    );
     return pubs;
   }, [cat, year, q]);
 
@@ -69,13 +82,22 @@ function PublicationsCategory() {
   const years = useMemo(() => {
     if (cat === 'All' || cat === 'All Publications') {
       // Show all years for 'All Publications'
-      const yearList = allPublications.map(p => p.year).filter(y => y !== undefined && y !== null);
+      const yearList = allPublications.map(
+        p => p.year
+      ).filter(y => y !== undefined && y !== null);
       const set = new Set(yearList);
       return Array.from(set).sort((a, b) => b - a);
     } else {
       // Show only years for selected category
-      const yearList = allPublications.filter(p => p.category === cat).map(p => p.year).filter(y => y !== undefined && y !== null);
+      const yearList = allPublications.filter(
+        p => p.category === cat
+      ).map(
+        p => p.year
+      ).filter(
+        y => y !== undefined && y !== null
+      );
       const set = new Set(yearList);
+      
       return Array.from(set).sort((a, b) => b - a);
     }
   }, [cat]);
@@ -102,7 +124,17 @@ function PublicationsCategory() {
       <div id="PublicationsCategoryPage">
         {/* DEBUG: Show filter state and years array for all publications */}
         {(cat === 'All' || cat === 'All Publications') && (
-          <div style={{background: '#fffbe6', color: '#333', padding: '0.5rem', marginBottom: '1rem', fontSize: '0.95rem', border: '2px solid #f7c948'}}>
+          <div style={
+              {
+                background: '#fffbe6', 
+                color: '#333', 
+                padding: '0.5rem', 
+                marginBottom: '1rem', 
+                fontSize: '0.95rem', 
+                border: '2px solid #f7c948'
+              }
+            }
+          >
             <strong>DEBUG (All Publications):</strong> cat: {String(cat)} | year: {String(year)} | years: [{years.join(', ')}]
           </div>
         )}
@@ -123,7 +155,7 @@ function PublicationsCategory() {
           {currentOverview && (
             <div className="bg-white pa2-00 ba blue0 b--black-10 br0-25 pv4-00"
             >
-              <h2 className="f2-00 mb1-00">{currentLabel} Overview</h2>
+              {/* <h2 className="f2-00 mb1-00">{currentLabel} Overview</h2> */}
               {currentOverview.map((para, idx) => (
                 <p key={idx} className="f1-00 gray0 f1-50 lh-copy">{para}</p>
               ))}
@@ -131,7 +163,8 @@ function PublicationsCategory() {
           )}
         </header>
         <main className="ph1-00">
-          <section className="grid gtc12 ggap1-00 pv1-00">
+          <article className="grid gtc12 ggap1-00 pv1-00"
+          >
             {/* Results */}
             <section className="gc1s12 grid gtc12 ggap1-00">
               {
@@ -147,22 +180,35 @@ function PublicationsCategory() {
                         className="bg-white ba b--black-10 br0-25 overflow-hidden grid gtc12 gc1s12"
                       >
                         <figure className="gr1s1 gc1s5 bg-blue1">
-                          <img src={p.thumbnail} alt={`${p.title} — ${p.category}`} className="w-100 h-100 cover" loading="lazy" decoding="async" />
+                          <img src={p.thumbnail} 
+                            alt={`${p.title} — ${p.category}`} 
+                            className="w-100 h-100 cover" 
+                            loading="lazy" 
+                            decoding="async" 
+                          />
                         </figure>
-                        <div className="gr1s1 gc6s7 pa1-00 flex flex-column justify-between">
+                        <div className="gr1s1 gc6s7 pa1-00 flex flex-column justify-between blue0">
                           <div>
                             <h3 className="mt0-00 mb0-25">{p.title}</h3>
                             <div className="f0-875 gray mb0-50">{p.category} • {p.year}</div>
                             {p.description && <p className="lh-copy mt0-00">{p.description}</p>}
                           </div>
-                          <div className="flex ggap0-50 mt1-00">
+                          <div className="flex ggap0-50 mt1-00 white-90 ">
                             {p.fileUrl && (
-                              <a href={p.fileUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
+                              <a href={p.fileUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="ba br0-25 pa0-50 flex items-center bg-green blue0"
+                              >
                                 <FiDownload className="mr0-25" /> Download
                               </a>
                             )}
                             {p.externalUrl && (
-                              <a href={p.externalUrl} target="_blank" rel="noopener noreferrer" className="ba br0-25 pa0-50 flex items-center">
+                              <a href={p.externalUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer" 
+                                className="ba br0-25 pa0-50 flex items-center bg-blue1 white-90"
+                              >
                                 <FiExternalLink className="mr0-25" /> View online
                               </a>
                             )}
@@ -174,10 +220,13 @@ function PublicationsCategory() {
                 )
               }
             </section>
-          </section>
+          </article>
         </main>
         <footer>
-          <AESLPageFooter pageTitle={currentLabel} textclassName={footerText} bgclassName={footerBg} />
+          <AESLPageFooter pageTitle={currentLabel} 
+            textclassName={footerText} 
+            bgclassName={footerBg} 
+          />
         </footer>
       </div>
     </>
