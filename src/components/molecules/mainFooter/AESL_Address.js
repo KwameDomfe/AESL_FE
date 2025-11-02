@@ -1,9 +1,6 @@
-import React from 'react'
 import aesl_logo from '../../../images/_partials/logos/aesl_logo.png'
-import { Link } from 'react-router-dom'
 import { TfiEmail } from "react-icons/tfi";
 
-<TfiEmail />
 const AESL_Address = () => {
   return (
     <div id="aesl_address"

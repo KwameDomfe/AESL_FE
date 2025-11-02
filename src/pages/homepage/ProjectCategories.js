@@ -10,7 +10,6 @@ import civicAndCulture from '../../images/projects/civic_and_culture/civic/civic
 import education from '../../images/projects/education/5_2.jpg'
 import health from '../../images/projects/health/1_1a.jpg'
 import office_and_mixed_use from '../../images/projects/office_retail_and_mixed_use/6_1a.jpg'
-import industrial_and_retail from '../../images/projects/hospitality/2_2a.jpg'
 import hospitality from '../../images/projects/hospitality/1_1a.jpg'
 import infrastructure_and_survey from '../../images/projects/industrial_and_infrastructure/1_2.jpg'
 import residential from '../../images/projects/residential/proposal_5/5_4a.jpg'
